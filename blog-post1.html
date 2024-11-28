@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Create an Effective Resume - Career Guidance</title>
+    <style>
+        /* Light mode default styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header {
+            background-color: #1f1f1f;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            color: #007bff;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #007bff;
+            font-size: 2rem;
+            margin-top: 40px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        ol {
+            font-size: 1.2rem;
+            margin-left: 20px;
+        }
+
+        footer {
+            background-color: #1f1f1f;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+
+        /* Dark Mode styles */
+        body.dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        header.dark-mode {
+            background-color: #333;
+        }
+
+        footer.dark-mode {
+            background-color: #333;
+        }
+
+        .toggle-container {
+            display: flex;
+            justify-content: flex-end;
+            padding: 20px;
+        }
+
+        .toggle-container label {
+            color: #007bff;
+            font-size: 1.2rem;
+            margin-left: 10px;
+        }
+
+        .toggle-container input[type="checkbox"] {
+            width: 50px;
+            height: 30px;
+            border-radius: 50px;
+            appearance: none;
+            background-color: #007bff;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .toggle-container input[type="checkbox"]:checked {
+            background-color: #444;
+        }
+
+        .toggle-container input[type="checkbox"]:before {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background-color: white;
+            transition: transform 0.3s;
+        }
+
+        .toggle-container input[type="checkbox"]:checked:before {
+            transform: translateX(20px);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <a href="index.html">Career Guidance</a>
+    </header>
+
+    <!-- Dark/Light Mode Toggle -->
+    <div class="toggle-container">
+        <span>Light Mode / Dark Mode</span>
+        <input type="checkbox" id="theme-toggle">
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>How to Create an Effective Resume</h1>
+
+        <p>Your resume is your first chance to make a great impression on potential employers. A well-written resume can help you stand out and land the job you're looking for. Here are some tips on how to create an effective resume:</p>
+
+        <h2>1. Start with a Clear Objective or Summary</h2>
+        <p>Your resume should begin with a brief summary or career objective. This should be a few sentences outlining your career goals and what you can offer to an employer. It’s important to tailor this section to the specific job you're applying for.</p>
+
+        <h2>2. Highlight Your Skills and Achievements</h2>
+        <p>Make sure to highlight your key skills and accomplishments. Use bullet points to make it easy to read. Focus on specific skills that are relevant to the job, such as technical skills, leadership abilities, or communication skills.</p>
+
+        <h2>3. Include Relevant Experience</h2>
+        <p>Your professional experience is the most important section of your resume. List your most recent job experience first, and work backward. Include your job title, company name, dates of employment, and key responsibilities. Be sure to focus on achievements and measurable outcomes, such as increasing sales or improving team performance.</p>
+
+        <h2>4. Education and Certifications</h2>
+        <p>List your educational qualifications, including the institution, degree, and graduation year. If you have certifications or additional training relevant to the job, be sure to include those as well.</p>
+
+        <h2>5. Keep It Concise</h2>
+        <p>A resume should be concise and easy to read. Aim for one page if you have less than 10 years of experience and two pages if you have more. Keep your language clear and avoid unnecessary details.</p>
+
+        <h2>6. Tailor Your Resume for Each Job</h2>
+        <p>Customize your resume for each job application. Use keywords from the job description to make sure your resume aligns with the skills and qualifications the employer is looking for.</p>
+
+        <h2>7. Proofread and Edit</h2>
+        <p>Finally, ensure your resume is free of any errors. Proofread your resume multiple times and ask a friend or mentor to review it as well. Mistakes or typos can give the impression of carelessness.</p>
+
+        <p>By following these tips, you’ll be on your way to creating an effective resume that highlights your skills and experience in the best light.</p>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Career Guidance. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Dark/Light Mode Toggle -->
+    <script>
+        const toggleSwitch = document.getElementById('theme-toggle');
+
+        // Check if dark mode is already set in localStorage
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+            toggleSwitch.checked = true;
+        }
+
+        toggleSwitch.addEventListener('change', () => {
+            document.body.classList.toggle('dark-mode');
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.removeItem('theme');
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology Career - Career Guidance</title>
+    <style>
+        /* Common Styles (For Dark and Light Mode) */
+        .career-option.dark-mode:hover {
+    transform: scale(1.05);
+    border: 2px solid #80b3ff;  /* Light blue border for dark mode */
+}
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header {
+            background-color: #1f1f1f;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            color: #007bff;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .career-path {
+            margin-top: 40px;
+        }
+
+        .career-option {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, border 0.3s ease-in-out;
+        }
+
+        .career-option:hover {
+            transform: scale(1.05);
+            border: 2px solid #007bff;
+        }
+
+        .career-option h3 {
+            color: #007bff;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .career-option p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .career-option a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .career-option a:hover {
+            color: #0056b3;
+        }
+
+        .cta {
+            display: block;
+            text-align: center;
+            background-color: #007bff;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            margin-top: 40px;
+        }
+
+        .cta:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #1f1f1f;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+
+        /* Dark Mode Styles */
+        body.dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        header.dark-mode {
+            background-color: #333;
+        }
+
+        .career-option.dark-mode {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            border: 1px solid #444;
+        }
+
+        .career-option.dark-mode a {
+            color: #80b3ff;
+        }
+
+        .cta.dark-mode {
+            background-color: #333;
+        }
+
+        .cta.dark-mode:hover {
+            background-color: #555;
+        }
+
+        /* Toggle Switch Styles */
+        .toggle-container {
+            display: flex;
+            justify-content: flex-end;
+            padding: 20px;
+        }
+
+        .toggle-container label {
+            color: #007bff;
+            font-size: 1.2rem;
+            margin-left: 10px;
+        }
+
+        .toggle-container input[type="checkbox"] {
+            width: 50px;
+            height: 30px;
+            border-radius: 50px;
+            appearance: none;
+            background-color: #007bff;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .toggle-container input[type="checkbox"]:checked {
+            background-color: #444;
+        }
+
+        .toggle-container input[type="checkbox"]:before {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background-color: white;
+            transition: transform 0.3s;
+        }
+
+        .toggle-container input[type="checkbox"]:checked:before {
+            transform: translateX(20px);
+            .career-card:hover {
+    transform: scale(1.05);
+    border: 3px solid #007bff;
+    box-shadow: 0 8px 16px rgba(0, 123, 255, 0.5);
+    transition: transform 0.3s, border 0.3s, box-shadow 0.3s ease-in-out;
+}
+
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <a href="index.html">Career Guidance</a>
+    </header>
+
+    <!-- Dark/Light Mode Toggle -->
+    <div class="toggle-container">
+        <span>Light Mode / Dark Mode</span>
+        <input type="checkbox" id="theme-toggle">
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Creative arts Careers</h1>
+        <p>Explore the exciting world of technology! Whether you're interested in software development, cybersecurity, or data science, the tech industry offers endless opportunities. Discover the paths available for a successful career in technology.</p>
+
+        <div class="career-path">
+            <h2>Popular Creative arts Career Paths</h2>
+
+            <!-- Career Options Cards -->
+            <div class="career-options">
+                <!-- Software Developer -->
+                <div class="career-option">
+                    <h3><a href="graphic design.html">Graphic Design</a></h3>
+                    <p>Design, develop, and maintain software applications that solve problems and enhance user experience.</p>
+                    <a href="graphic design.html">Learn More</a>
+                </div>
+
+                <!-- Data Scientist -->
+                <div class="career-option">
+                    <h3><a href="performing-arts.html">Performing Arts</a></h3>
+                    <p>Analyze large datasets to uncover insights that drive business decisions and innovations.</p>
+                    <a href="performing-arts.html">Learn More</a>
+                </div>
+
+                <!-- Cybersecurity Expert -->
+                <div class="career-option">
+                    <h3><a href="ui-ux.html">UI UX Designer</a></h3>
+                    <p>Protect organizations from cyber threats by implementing security measures and protocols.</p>
+                    <a href="ui-ux.html">Learn More</a>
+                </div>
+
+                <!-- IT Support Specialist -->
+                <div class="career-option">
+                    <h3><a href="fine-art.html">Fine Arts</a></h3>
+                    <p>Provide technical assistance to individuals and organizations, ensuring systems run smoothly.</p>
+                    <a href="fine-art.html">Learn More</a>
+                </div>
+
+                <!-- Cloud Engineer -->
+                <!-- <div class="career-option">
+                    <h3><a href="aeronautical.html">Aeronautical Engineer</a></h3>
+                    <p>Build and manage cloud-based infrastructure to enable scalable and flexible IT solutions.</p>
+                    <a href="aeronautical.html">Learn More</a>
+                </div> -->
+            <!-- </div>
+
+            <a href="#contact" class="cta">Start Your Technology Career</a>
+        </div> -->
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Career Guidance. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Dark/Light Mode Toggle -->
+    <script>
+        const toggleSwitch = document.getElementById('theme-toggle');
+
+        // Check if dark mode is already set in localStorage
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+            document.querySelectorAll('.career-option').forEach(card => {
+                card.classList.add('dark-mode');
+            });
+            document.querySelector('.cta').classList.add('dark-mode');
+            document.querySelector('header').classList.add('dark-mode');
+        }
+
+        // Add event listener to toggle between dark and light mode
+        toggleSwitch.addEventListener('change', () => {
+            document.body.classList.toggle('dark-mode');
+            document.querySelectorAll('.career-option').forEach(card => {
+                card.classList.toggle('dark-mode');
+            });
+            document.querySelector('.cta').classList.toggle('dark-mode');
+            document.querySelector('header').classList.toggle('dark-mode');
+
+            // Save the theme choice to localStorage
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.removeItem('theme');
+            }
+        });
+    </script>
+</body>
+</html>

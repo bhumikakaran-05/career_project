@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Guidance for Software Developers</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header {
+            background-color: #1f1f1f;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.8rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            color: #007bff;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #007bff;
+            font-size: 2rem;
+            margin-top: 40px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        ol {
+            font-size: 1.2rem;
+            margin-left: 20px;
+        }
+
+        .roadmap, .colleges {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .roadmap ul, .colleges ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .roadmap li, .colleges li {
+            background-color: #f0f8ff;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #1f1f1f;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+
+        .toggle-container {
+            display: flex;
+            justify-content: flex-end;
+            padding: 20px;
+        }
+
+        .toggle-container label {
+            color: #007bff;
+            font-size: 1.2rem;
+            margin-left: 10px;
+        }
+
+        .toggle-container input[type="checkbox"] {
+            width: 50px;
+            height: 30px;
+            border-radius: 50px;
+            appearance: none;
+            background-color: #007bff;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .toggle-container input[type="checkbox"]:checked {
+            background-color: #444;
+        }
+
+        .toggle-container input[type="checkbox"]:before {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background-color: white;
+            transition: transform 0.3s;
+        }
+
+        .toggle-container input[type="checkbox"]:checked:before {
+            transform: translateX(20px);
+        }
+
+        /* Dark Mode Styles */
+        body.dark-mode {
+            background-color: #333;
+            color: #f4f7f6;
+        }
+
+        header.dark-mode {
+            background-color: #444;
+        }
+
+        .roadmap.dark-mode, .colleges.dark-mode {
+            background-color: #444;
+            color: #f4f7f6;
+        }
+
+        .roadmap.dark-mode li, .colleges.dark-mode li {
+            background-color: #555;
+        }
+
+        footer.dark-mode {
+            background-color: #444;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <a href="index.html">Career Guidance</a>
+    </header>
+
+    <!-- Dark/Light Mode Toggle -->
+    <div class="toggle-container">
+        <span>Light Mode / Dark Mode</span>
+        <input type="checkbox" id="theme-toggle">
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Career Guidance for Software Developers</h1>
+        <p>Software development is a dynamic and ever-evolving field, offering a wide range of career opportunities. This page outlines the roadmap to becoming a successful software developer and provides suggestions for top colleges at different levels of education. Whether you're just starting or looking to advance your career, this guide will help you plan your journey.</p>
+
+        <!-- Career Roadmap Section -->
+        <div class="roadmap">
+            <h2>Software Developer Career Roadmap</h2>
+            <p>To build a successful career as a software developer, follow these essential stages:</p>
+            <ul>
+                <li><strong>Step 1: Learn the Basics</strong> - Start with fundamental programming languages like Python, Java, or JavaScript. Get comfortable with key concepts such as variables, data structures, and algorithms.</li>
+                <li><strong>Step 2: Get a Formal Education (Optional)</strong> - Pursue a degree in computer science, software engineering, or related fields. This provides a strong foundation and enhances employability.</li>
+                <li><strong>Step 3: Build Projects</strong> - Apply your knowledge by building projects. Create a portfolio showcasing your work on platforms like GitHub or your own website. This is crucial for building a strong personal brand.</li>
+                <li><strong>Step 4: Learn Web Development or Mobile App Development</strong> - Dive into specialized areas such as front-end development, back-end development, or mobile app development. Master tools like React, Node.js, or Swift.</li>
+                <li><strong>Step 5: Gain Real-World Experience</strong> - Apply for internships or junior developer roles to gain hands-on experience. Contribute to open-source projects and collaborate with other developers.</li>
+                <strong>Step 6: Specialize or Advance Your Skills</strong> - After gaining experience, specialize in areas like artificial intelligence, machine learning, cloud computing, or cybersecurity. Consider advanced certifications or a master’s degree in your area of interest.</li>
+                <li><strong>Step 7: Seek Senior Developer Roles</strong> - With years of experience, transition into senior developer positions. Lead teams, mentor junior developers, and take on more complex projects.</li>
+                <li><strong>Step 8: Explore Management or Entrepreneurial Roles</strong> - As a senior developer, you may choose to move into management (e.g., Engineering Manager) or start your own tech company or product.</li>
+            </ul>
+        </div>
+
+        <!-- College Suggestions Section -->
+        <div class="colleges">
+            <h2>Online Learning Options</h2>
+            <!-- <p>Here are some of the best colleges and universities at different levels for pursuing a career in software development:</p>
+
+            <h3>Undergraduate (Bachelor's) Level</h3>
+            <ul>
+                <li><strong>Massachusetts Institute of Technology (MIT), USA</strong> - Renowned for its cutting-edge computer science program.</li>
+                <li><strong>Stanford University, USA</strong> - Offers strong programs in computer science and software engineering.</li>
+                <li><strong>University of California, Berkeley, USA</strong> - Excellent computer science department with a focus on AI and software development.</li>
+                <li><strong>Indian Institute of Technology (IIT) Bombay, India</strong> - Leading institution for technology and engineering education in India.</li>
+                <li><strong>National University of Singapore (NUS), Singapore</strong> - Offers top-tier computer science programs in the heart of Asia's tech hub.</li>
+            </ul>
+
+            <h3>Graduate (Master's) Level</h3>
+            <ul>
+                <li><strong>Carnegie Mellon University, USA</strong> - One of the world’s top institutions for software engineering and computer science.</li>
+                <li><strong>University of Cambridge, UK</strong> - Offers world-class graduate programs in computer science with a focus on software systems.</li>
+                <li><strong>ETH Zurich, Switzerland</strong> - Known for its high-quality research in software engineering, AI, and machine learning.</li>
+                <li><strong>Indian Institute of Technology (IIT) Delhi, India</strong> - Offers specialized graduate programs in computer science and software engineering.</li>
+                <li><strong>University of Toronto, Canada</strong> - Offers top-notch graduate courses in software development and AI.</li>
+            </ul> -->
+
+            <!-- <h3>Online Learning Options</h3> -->
+            <ul>
+                <li><strong>Coursera (Stanford, University of Michigan, etc.)</strong> - Online certificates and courses in various programming and software development fields.</li>
+                <li><strong>Udemy</strong> - Offers a wide range of affordable courses on software development, from beginner to advanced levels.</li>
+                <li><strong>edX (Harvard, MIT)</strong> - Provides online degrees and professional certifications in software development and computer science.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <p>&copy; 2024 Career Guidance for Software Developers. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const toggle = document.getElementById('theme-toggle');
+        toggle.addEventListener('change', () => {
+            if (toggle.checked) {
+                document.body.classList.add('dark-mode');
+                document.getElementById('header').classList.add('dark-mode');
+                document.querySelectorAll('.roadmap, .colleges').forEach((el) => {
+                    el.classList.add('dark-mode');
+                });
+                document.getElementById('footer').classList.add('dark-mode');
+            } else {
+                document.body.classList.remove('dark-mode');
+                document.getElementById('header').classList.remove('dark-mode');
+                document.querySelectorAll('.roadmap, .colleges').forEach((el) => {
+                    el.classList.remove('dark-mode');
+                });
+                document.getElementById('footer').classList.remove('dark-mode');
+            }
+        });
+    </script>
+</body>
+</html>

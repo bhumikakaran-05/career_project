@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Guidance for Data Scientists</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header {
+            background-color: #1f1f1f;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.8rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            color: #007bff;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #007bff;
+            font-size: 2rem;
+            margin-top: 40px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        ol {
+            font-size: 1.2rem;
+            margin-left: 20px;
+        }
+
+        .roadmap, .colleges {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .roadmap ul, .colleges ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .roadmap li, .colleges li {
+            background-color: #f0f8ff;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #1f1f1f;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+
+        .toggle-container {
+            display: flex;
+            justify-content: flex-end;
+            padding: 20px;
+        }
+
+        .toggle-container label {
+            color: #007bff;
+            font-size: 1.2rem;
+            margin-left: 10px;
+        }
+
+        .toggle-container input[type="checkbox"] {
+            width: 50px;
+            height: 30px;
+            border-radius: 50px;
+            appearance: none;
+            background-color: #007bff;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .toggle-container input[type="checkbox"]:checked {
+            background-color: #444;
+        }
+
+        .toggle-container input[type="checkbox"]:before {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background-color: white;
+            transition: transform 0.3s;
+        }
+
+        .toggle-container input[type="checkbox"]:checked:before {
+            transform: translateX(20px);
+        }
+
+        /* Dark Mode Styles */
+        body.dark-mode {
+            background-color: #333;
+            color: #f4f7f6;
+        }
+
+        header.dark-mode {
+            background-color: #444;
+        }
+
+        .roadmap.dark-mode, .colleges.dark-mode {
+            background-color: #444;
+            color: #f4f7f6;
+        }
+
+        .roadmap.dark-mode li, .colleges.dark-mode li {
+            background-color: #555;
+        }
+
+        footer.dark-mode {
+            background-color: #444;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <a href="index.html">Career Guidance</a>
+    </header>
+
+    <!-- Dark/Light Mode Toggle -->
+    <div class="toggle-container">
+        <span>Light Mode / Dark Mode</span>
+        <input type="checkbox" id="theme-toggle">
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Career Guidance for Data Scientists</h1>
+        <p>Data science is one of the fastest-growing fields, with a high demand for skilled professionals. Whether you're new to the field or looking to enhance your skills, this page provides a roadmap to becoming a successful data scientist, along with educational resources and top colleges for pursuing a career in data science.</p>
+
+        <!-- Career Roadmap Section -->
+        <div class="roadmap">
+            <h2>Data Scientist Career Roadmap</h2>
+            <p>Follow these key steps to build a successful career in data science:</p>
+            <ul>
+                <li><strong>Step 1: Learn Programming and Data Manipulation</strong> - Start with programming languages like Python or R, and learn data manipulation libraries such as Pandas, NumPy, and Matplotlib.</li>
+                <li><strong>Step 2: Understand Statistics and Mathematics</strong> - Learn the basics of probability, statistics, linear algebra, and calculus, as these are foundational to data analysis and modeling.</li>
+                <li><strong>Step 3: Master Data Visualization</strong> - Learn how to represent data visually using tools like Tableau, Power BI, or libraries such as Seaborn and Plotly in Python.</li>
+                <li><strong>Step 4: Study Machine Learning</strong> - Learn supervised and unsupervised learning, deep learning, and other advanced machine learning techniques with tools like TensorFlow, Keras, and Scikit-learn.</li>
+                <li><strong>Step 5: Gain Real-World Experience</strong> - Work on real-world projects to apply your knowledge. Contribute to open-source projects and participate in competitions like Kaggle to build your portfolio.</li>
+                <li><strong>Step 6: Specialize in a Niche Area</strong> - Choose a niche within data science such as natural language processing, computer vision, or big data analytics. Deepen your expertise in that area.</li>
+                <li><strong>Step 7: Pursue Higher Education (Optional)</strong> - Consider pursuing a Master’s degree or PhD in data science or related fields to open up more advanced career opportunities.</li>
+                <li><strong>Step 8: Apply for Data Scientist Roles</strong> - Apply for entry-level roles and internships. Build a solid resume and portfolio to showcase your skills and experience.</li>
+            </ul>
+        </div>
+
+        <!-- College Suggestions Section -->
+        <div class="colleges">
+            <h2>Online Learning Options</h2>
+            <!-- <p>Here are some of the best institutions to pursue education in data science at various levels:</p>
+
+            <h3>Undergraduate (Bachelor's) Level</h3>
+            <ul>
+                <li><strong>Massachusetts Institute of Technology (MIT), USA</strong> - Offers a strong computer science and data science program.</li>
+                <li><strong>Stanford University, USA</strong> - Known for its cutting-edge research and expertise in machine learning and data science.</li>
+                <li><strong>University of California, Berkeley, USA</strong> - Offers excellent courses in statistics, computer science, and data analysis.</li>
+                <li><strong>Indian Institute of Technology (IIT) Bombay, India</strong> - Leading institution for computer science and data science education in India.</li>
+                <li><strong>National University of Singapore (NUS), Singapore</strong> - Offers top-tier programs in computer science with a strong focus on data analytics and AI.</li>
+            </ul>
+
+            <h3>Graduate (Master's) Level</h3>
+            <ul>
+                <li><strong>Carnegie Mellon University, USA</strong> - Offers a renowned Master’s in Data Science and Analytics.</li>
+                <li><strong>University of Cambridge, UK</strong> - World-class graduate programs in data science with a focus on machine learning and AI.</li>
+                <li><strong>ETH Zurich, Switzerland</strong> - A leading institution for data science research and education.</li>
+                <li><strong>Indian Institute of Technology (IIT) Delhi, India</strong> - Offers specialized graduate programs in data science and AI.</li>
+                <li><strong>University of Toronto, Canada</strong> - Known for its strong graduate programs in data science and AI.</li>
+            </ul> -->
+
+            <!-- <h3>Online Learning Options</h3> -->
+            <ul>
+                <li><strong>Coursera (Stanford, University of Michigan, etc.)</strong> - Offers online certificates and courses in data science, machine learning, and AI.</li>
+                <li><strong>Udemy</strong> - Affordable online courses in data science and machine learning from beginner to expert levels.</li>
+                <li><strong>edX (Harvard, MIT)</strong> - Provides online degrees and professional certificates in data science and related fields.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <p>&copy; 2024 Career Guidance for Data Scientists. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const toggle = document.getElementById('theme-toggle');
+        toggle.addEventListener('change', () => {
+            if (toggle.checked) {
+                document.body.classList.add('dark-mode');
+                document.getElementById('header').classList.add('dark-mode');
+                document.querySelectorAll('.roadmap, .colleges').forEach((el) => {
+                    el.classList.add('dark-mode');
+                });
+                document.getElementById('footer').classList.add('dark-mode');
+            } else {
+                document.body.classList.remove('dark-mode');
+                document.getElementById('header').classList.remove('dark-mode');
+                document.querySelectorAll('.roadmap, .colleges').forEach((el) => {
+                    el.classList.remove('dark-mode');
+                });
+                document.getElementById('footer').classList.remove('dark-mode');
+            }
+        });
+    </script>
+</body>
+</html>

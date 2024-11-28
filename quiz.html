@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Interest Quiz</title>
+    <style>
+        :root {
+            --bg-color: #eef2f7;
+            --text-color: #333;
+            --header-bg: #007bff;
+            --header-text: #fff;
+            --container-bg: #fff;
+            --border-color: #007bff;
+            --highlight-color: #4caf50;
+            --selected-option-color: #007bff;
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #1e1e2f;
+            --text-color: #f0f0f0;
+            --header-bg: #121225;
+            --header-text: #ffffff;
+            --container-bg: #2b2b3c;
+            --border-color: #4caf50;
+            --highlight-color: #4caf50;
+            --selected-option-color: #4caf50;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header {
+            background-color: var(--header-bg);
+            color: var(--header-text);
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: var(--container-bg);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        .question {
+            margin-bottom: 20px;
+            border: 2px solid transparent;
+            border-radius: 8px;
+            padding: 10px;
+            transition: border-color 0.3s, background-color 0.3s;
+        }
+
+        .question:hover {
+            border-color: var(--border-color);
+            background-color: rgba(0, 123, 255, 0.1);
+        }
+
+        .question h3 {
+            color: var(--border-color);
+            margin-bottom: 10px;
+        }
+
+        .options label {
+            display: block;
+            margin: 8px 0;
+            font-size: 1rem;
+            cursor: pointer;
+            padding: 5px;
+            transition: color 0.3s, background-color 0.3s;
+        }
+
+        .options input {
+            margin-right: 10px;
+        }
+
+        .options input:checked + label {
+            color: var(--selected-option-color);
+            font-weight: bold;
+        }
+
+        .options label:hover {
+            color: var(--highlight-color);
+            background-color: rgba(76, 175, 80, 0.1);
+        }
+
+        .result {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .result h2 {
+            color: var(--border-color);
+            margin: 0 0 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: var(--header-bg);
+            color: var(--header-text);
+            font-size: 1rem;
+        }
+
+        footer a {
+            color: var(--border-color);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+                /* Toggle Container Styles */
+                .toggle-container {
+            display: flex;
+            justify-content: flex-end;
+            padding: 20px;
+        }
+
+        .toggle-container label {
+            color: #007bff;
+            font-size: 1.2rem;
+            margin-left: 10px;
+        }
+
+        .toggle-container input[type="checkbox"] {
+            width: 50px;
+            height: 30px;
+            border-radius: 50px;
+            appearance: none;
+            background-color: #007bff;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .toggle-container input[type="checkbox"]:checked {
+            background-color: #444;
+        }
+
+        .toggle-container input[type="checkbox"]:before {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background-color: white;
+            transition: transform 0.3s;
+        }
+
+        .toggle-container input[type="checkbox"]:checked:before {
+            transform: translateX(20px);
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #1f1f1f;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        /* Navigation Menu */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #007bff;
+        }
+
+        /* Mobile Navigation */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin-bottom: 10px;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html">Career Guidance</a>
+
+    </header>
+
+    <div class="toggle-container">
+        <span>Light Mode / Dark Mode</span>
+        <input type="checkbox" id="theme-toggle">
+    </div>
+
+    <div class="container">
+        <h2>Discover Your Perfect Career Path</h2>
+        <p>Answer the questions below to find a career that suits your interests and skills.</p>
+        <form id="careerQuiz">
+            <div class="question">
+                <h3>1. What activities do you enjoy the most?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="engineering"> Solving technical problems</label>
+                    <label><input type="radio" name="q1" value="creative"> Creating art or designs</label>
+                    <label><input type="radio" name="q1" value="healthcare"> Helping people with their health</label>
+                    <label><input type="radio" name="q1" value="farming"> Working outdoors with nature</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>2. Which subject interests you most?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="science"> Science</label>
+                    <label><input type="radio" name="q2" value="business"> Business Studies</label>
+                    <label><input type="radio" name="q2" value="technology"> Computer Science</label>
+                    <label><input type="radio" name="q2" value="environmental"> Environmental Studies</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>3. How do you prefer to work?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="law"> Analyzing and solving legal cases</label>
+                    <label><input type="radio" name="q3" value="education"> Teaching and guiding others</label>
+                    <label><input type="radio" name="q3" value="renewable"> Innovating for a sustainable future</label>
+                    <label><input type="radio" name="q3" value="marketing"> Creating strategies to promote products</label>
+                </div>
+            </div>
+            
+            <div class="question">
+                <h3>4. Do you enjoy working with technology?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="technology"> Yes, I love working with gadgets and software</label>
+                    <label><input type="radio" name="q4" value="science"> Yes, especially experimenting and innovating</label>
+                    <label><input type="radio" name="q4" value="business"> No, I prefer managing or organizing</label>
+                    <label><input type="radio" name="q4" value="law"> No, I prefer tasks that involve critical thinking</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>5. How do you feel about working in a team?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="education"> I enjoy guiding and working collaboratively</label>
+                    <label><input type="radio" name="q5" value="sports"> I thrive in competitive, team-based environments</label>
+                    <label><input type="radio" name="q5" value="journalism"> I prefer working independently but sharing insights</label>
+                    <label><input type="radio" name="q5" value="finance"> I prefer structured and analytical teamwork</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>6. What kind of workplace inspires you?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q6" value="farming"> Outdoors with nature</label>
+                    <label><input type="radio" name="q6" value="technology"> Modern and innovative</label>
+                    <label><input type="radio" name="q6" value="hospitality"> Energetic and customer-focused</label>
+                    <label><input type="radio" name="q6" value="creative"> Artistic and collaborative</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>7. How do you approach problem-solving?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q7" value="engineering"> I break it into logical steps</label>
+                    <label><input type="radio" name="q7" value="renewable"> I think creatively for sustainable solutions</label>
+                    <label><input type="radio" name="q7" value="law"> I analyze facts and details</label>
+                    <label><input type="radio" name="q7" value="marketing"> I brainstorm innovative ideas</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>8. What motivates you most in a career?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q8" value="finance"> Financial growth</label>
+                    <label><input type="radio" name="q8" value="healthcare"> Helping others</label>
+                    <label><input type="radio" name="q8" value="journalism"> Telling impactful stories</label>
+                    <label><input type="radio" name="q8" value="sports"> Achieving goals and recognition</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>9. Which of these do you enjoy most?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q9" value="business"> Managing projects or businesses</label>
+                    <label><input type="radio" name="q9" value="creative"> Designing or crafting</label>
+                    <label><input type="radio" name="q9" value="science"> Conducting experiments</label>
+                    <label><input type="radio" name="q9" value="hospitality"> Organizing events or trips</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>10. How do you prefer to communicate?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q10" value="education"> By teaching and mentoring</label>
+                    <label><input type="radio" name="q10" value="marketing"> By creating convincing content</label>
+                    <label><input type="radio" name="q10" value="journalism"> By documenting and reporting</label>
+                    <label><input type="radio" name="q10" value="technology"> Through coding or technical explanations</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>11. What role fits your personality best?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q11" value="leadership"> Leader or decision-maker</label>
+                    <label><input type="radio" name="q11" value="support"> Supporter and collaborator</label>
+                    <label><input type="radio" name="q11" value="innovator"> Innovator and problem-solver</label>
+                    <label><input type="radio" name="q11" value="creator"> Creator and artist</label>
+                </div>
+            </div>
+        </form>
+        <div class="result" id="result"></div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Career Guidance Portal | Designed with passion. <a href="#">Privacy Policy</a></p>
+    </footer>
+    <script>const quizForm = document.forms['careerQuiz'];
+        const resultDiv = document.getElementById('result');
+
+        // Map career descriptions
+        const careerDescriptions = {
+            engineering: "Engineering: Explore opportunities in software, mechanical, or civil engineering.",
+            creative: "Creative Arts: Ideal for careers in design, painting, or animation.",
+            healthcare: "Healthcare: Perfect for medicine, therapy, or nursing roles.",
+            farming: "Agriculture: Best suited for agritech and farming roles.",
+            business: "Business: Thrive in marketing or management.",
+            technology: "Technology: Build a career in AI, software, or cybersecurity.",
+            environmental: "Environmental Science: Join efforts for a sustainable planet.",
+            law: "Law: Navigate legal frameworks and justice.",
+            education: "Education: Shape future minds.",
+            marketing: "Marketing: Create impactful brand campaigns.",
+            finance: "Finance: Excel in investments or accounting.",
+            journalism: "Journalism: Share the world’s stories.",
+            sports: "Sports: Engage in athlete management.",
+            hospitality: "Hospitality: Perfect for event or travel management."
+        };
+
+        // Function to calculate and display the result
+        function calculateResult() {
+            const answers = {};
+            const tally = {};
+
+            // Collect answers
+            for (let i = 1; i <= 11; i++) {
+                const question = quizForm[`q${i}`];
+                if (question) {
+                    const selected = [...question].find(option => option.checked);
+                    if (selected) {
+                        const value = selected.value;
+                        answers[`q${i}`] = value;
+                        tally[value] = (tally[value] || 0) + 1;
+                    }
+                }
+            }
+
+            // Ensure all questions are answered
+            if (Object.keys(answers).length < 11) {
+                resultDiv.innerHTML = "<p style='color: red;'>Please answer all questions to see your result!</p>";
+                return;
+            }
+
+            // Find the top career
+            const topCareer = Object.keys(tally).reduce((a, b) => (tally[a] > tally[b] ? a : b));
+            const careerDescription = careerDescriptions[topCareer];
+
+            // Display the result
+            resultDiv.innerHTML = `
+                <h2>Your Career Match:</h2>
+                <p>${careerDescription}</p>
+            `;
+        }
+
+        // Listen for the last question's input change
+        const lastQuestionInputs = quizForm['q11'];
+        [...lastQuestionInputs].forEach(input => {
+            input.addEventListener('change', calculateResult);
+        });
+
+
+
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+
+        themeToggle.addEventListener('click', () => {
+            const isDark = body.dataset.theme === 'dark';
+            body.dataset.theme = isDark ? 'light' : 'dark';
+            themeToggle.textContent = isDark ? 'Switch to Dark Mode' : 'Switch to Light Mode';
+        });
+    </script>
+</body>
+</html>
